@@ -228,16 +228,18 @@ Alla scheda dovranno inoltre essere messi a disposizione, in formato elettronico
 
 ### Rappresentazione in formato JSON-LD
 
-Per garantire l'interoperabilità e l'analisi e verifica automatica dei servizi erogati, nel codice html della 
-"Scheda informativa di servizio al cittadino" si richiede di includere, nella sezione html `head`, il tag `<script type="application/ld+json">` con la rappresentazione JSON-LD della tipologia [GovernmentService](https://schema.org/GovernmentService) e delle tipologie collegate unità organizzativa e luogo. Nella rappresentazione andranno riportati alcuni degli attributi della tipologia [servizio](https://docs.google.com/spreadsheets/d/1-oA52ff-UapXjh5xrCcJdeIx0eIBQ7vJtcq2OBj3WwM/edit#gid=1078541142). Più in particolare andranno specificati:
+Per garantire l'interoperabilità e l'analisi e verifica automatica dei servizi erogati, nel codice html della "Scheda informativa di servizio al cittadino" si richiede di includere, nella sezione html `head`, il tag `<script type="application/ld+json">` con la rappresentazione JSON-LD della tipologia [GovernmentService](https://schema.org/GovernmentService).  
+Nella rappresentazione andranno riportati alcuni degli attributi della tipologia [servizio](https://docs.google.com/spreadsheets/d/1-oA52ff-UapXjh5xrCcJdeIx0eIBQ7vJtcq2OBj3WwM/edit#gid=1078541142) e delle tipologie collegate [unità organizzativa](https://docs.google.com/spreadsheets/d/1-oA52ff-UapXjh5xrCcJdeIx0eIBQ7vJtcq2OBj3WwM/edit#gid=462402072) e [luogo](https://docs.google.com/spreadsheets/d/1-oA52ff-UapXjh5xrCcJdeIx0eIBQ7vJtcq2OBj3WwM/edit#gid=60481136). Più in particolare andranno specificati:
 
 * il `titolo del servizio` nell'attributo json `name`;
 * il nome del comune nell'attributo json `serviceOperator>name`
 * il testo `a chi è rivolto` nell'attributo json `audience>name`
 * il link `canale digitale` nell'attributo json `availableChannel>name`
-* il link `canale digitale` nell'attributo json `availableChannel>name`
-* l'attributo `titolo` dell'unità organizzativa (es ufficio) responsabile del servizio nell'attributo json `serviceLocation>name` 
-* gli attributi `indirizzo` e 'CAP', nonché il nome del comune, rispettivamente negli attributi json `serviceLocation>address>streetAdress`, `serviceLocation>address>postalCode`, `serviceLocation>address>addressLocality`
+* l'attributo `titolo` dell'unità organizzativa (es ufficio o area) responsabile del servizio (attributo `Struttura responsabile` del servizio) nell'attributo json `serviceLocation>name` 
+* il nome del comune nell'attributo json `serviceLocation>address>addressLocality`
+* l'attributo `indirizzo` dell'oggetto `luogo` associato al'attributo `canale fisico` del servizio nell'attributo json `serviceLocation>address>streetAdress`
+* l'attributo `CAP` dell'oggetto `luogo` associato al'attributo `canale fisico` del servizio nell'attributo json `serviceLocation>address>postalCode`
+
 
 Si riporta il template del codice, con gli attributi in formato `<nomeattributo>`.
 
@@ -270,7 +272,7 @@ Si riporta il template del codice, con gli attributi in formato `<nomeattributo>
             "serviceLocation": {
               "@type": "Place",
               "name": "<unità organizzativa>",
-              "address": { // oggetto luogo di canale fisico
+              "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "luogo:indirizzo",
                 "postalCode": "luogo:cap"
