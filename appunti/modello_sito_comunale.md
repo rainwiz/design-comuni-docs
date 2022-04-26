@@ -226,6 +226,63 @@ Le schede informative di servizio costituiscono la rappresentazione (la pagina d
 
 Alla scheda dovranno inoltre essere messi a disposizione, in formato elettronico, gli atti che normano il servizio e tutti i documenti di supporto.
 
+### Rappresentazione in formato JSON-LD
+
+Per garantire l'interoperabilità e l'analisi e verifica automatica dei servizi erogati, nel codice html della 
+"Scheda informativa di servizio al cittadino" si richiede di includere, nella sezione html `head`, il tag `<script type="application/ld+json">` con la rappresentazione JSON-LD della tipologia [GovernmentService](https://schema.org/GovernmentService) e delle tipologie collegate unità organizzativa e luogo. Nella rappresentazione andranno riportati alcuni degli attributi della tipologia [servizio](https://docs.google.com/spreadsheets/d/1-oA52ff-UapXjh5xrCcJdeIx0eIBQ7vJtcq2OBj3WwM/edit#gid=1078541142). Più in particolare andranno specificati:
+
+* il `titolo del servizio` nell'attributo json `name`;
+* il nome del comune nell'attributo json `serviceOperator>name`
+* il testo `a chi è rivolto` nell'attributo json `audience>name`
+* il link `canale digitale` nell'attributo json `availableChannel>name`
+* il link `canale digitale` nell'attributo json `availableChannel>name`
+* l'attributo `titolo` dell'unità organizzativa (es ufficio) responsabile del servizio nell'attributo json `serviceLocation>name` 
+* gli attributi `indirizzo` e 'CAP', nonché il nome del comune, rispettivamente negli attributi json `serviceLocation>address>streetAdress`, `serviceLocation>address>postalCode`, `serviceLocation>address>addressLocality`
+
+Si riporta il template del codice, con gli attributi in formato `<nomeattributo>`.
+
+	<script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "GovernmentService",
+          "name": "<titolo del servizio>",
+          "serviceType": "<materie del servizio>",
+          "serviceOperator": {
+            "@type": "GovernmentOrganization",
+            "name": "Comune di <nomecomune>"
+          },
+          "areaServed": {
+            "@type": "AdministrativeArea",
+            "name": "Comune di <nomecomune>"
+          },
+          "audience": {
+            "@type": "Audience",
+            "name": "<a chi è rivolto>"
+          },
+          "availableChannel": {
+            "@type": "ServiceChannel",
+            "name": "<canale digitale>",
+            "availableLanguage": {
+              "@type": "Language",
+              "name": "Italian",
+              "alternateName": "it"
+            },
+            "serviceLocation": {
+              "@type": "Place",
+              "name": "<unità organizzativa>",
+              "address": { // oggetto luogo di canale fisico
+                "@type": "PostalAddress",
+                "streetAddress": "luogo:indirizzo",
+                "postalCode": "luogo:cap"
+                "addressLocality": "<nomecomune>",
+              }
+            }
+          }
+        }
+	</script>
+
+
+
 ## Prenotazione appuntamenti
 
 Il sito del comune deve permettere ai cittadini di prenotare online un appuntamento presso uno degli uffici preposti.
