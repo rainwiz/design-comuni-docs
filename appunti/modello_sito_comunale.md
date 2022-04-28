@@ -232,13 +232,16 @@ Per garantire l'interoperabilità e l'analisi e verifica automatica dei servizi 
 Nella rappresentazione andranno riportati alcuni degli attributi della tipologia [servizio](https://docs.google.com/spreadsheets/d/1-oA52ff-UapXjh5xrCcJdeIx0eIBQ7vJtcq2OBj3WwM/edit#gid=1078541142) e delle tipologie collegate [unità organizzativa](https://docs.google.com/spreadsheets/d/1-oA52ff-UapXjh5xrCcJdeIx0eIBQ7vJtcq2OBj3WwM/edit#gid=462402072) e [luogo](https://docs.google.com/spreadsheets/d/1-oA52ff-UapXjh5xrCcJdeIx0eIBQ7vJtcq2OBj3WwM/edit#gid=60481136). Più in particolare andranno specificati:
 
 * il `titolo del servizio` nell'attributo json `name`;
+* il l'attributo `materie del servizio` nell'attributo json `serviceType`;
 * il nome del comune nell'attributo json `serviceOperator>name`
-* il testo `a chi è rivolto` nell'attributo json `audience>name`
-* il link `canale digitale` nell'attributo json `availableChannel>name`
-* l'attributo `titolo` dell'unità organizzativa (es ufficio o area) responsabile del servizio (attributo `Struttura responsabile` del servizio) nell'attributo json `serviceLocation>name` 
-* il nome del comune nell'attributo json `serviceLocation>address>addressLocality`
-* l'attributo `indirizzo` dell'oggetto `luogo` associato al'attributo `canale fisico` del servizio nell'attributo json `serviceLocation>address>streetAdress`
-* l'attributo `CAP` dell'oggetto `luogo` associato al'attributo `canale fisico` del servizio nell'attributo json `serviceLocation>address>postalCode`
+* il l'attributo `copertura geografica` nell'attributo json `areaServed>name`
+* il testo `a chi è rivolto` nell'attributo json `audience>audienceType`
+* il link `canale digitale` nell'attributo json `availableChannel>serviceUrl`
+* l'attributo `titolo` dell'unità organizzativa (es ufficio o area) responsabile del servizio (attributo `Struttura responsabile` del servizio) nell'attributo json `availableChannel>serviceLocation>name` 
+* l'attributo `indirizzo` dell'oggetto `luogo` associato al'attributo `canale fisico` del servizio nell'attributo json `availableChannel>serviceLocation>address>streetAdress`
+* l'attributo `CAP` dell'oggetto `luogo` associato al'attributo `canale fisico` del servizio nell'attributo json `availableChannel>serviceLocation>address>postalCode`
+* il nome del comune nell'attributo json `availableChannel>serviceLocation>address>addressLocality`
+
 
 
 Si riporta il template del codice, con gli attributi in formato `<nomeattributo>`.
@@ -255,15 +258,16 @@ Si riporta il template del codice, con gli attributi in formato `<nomeattributo>
           },
           "areaServed": {
             "@type": "AdministrativeArea",
-            "name": "Comune di <nomecomune>"
+            "name": "<Copertura geografica>"
           },
           "audience": {
             "@type": "Audience",
-            "name": "<a chi è rivolto>"
+            "audienceType": "<a chi è rivolto>"
           },
           "availableChannel": {
             "@type": "ServiceChannel",
-            "name": "<canale digitale>",
+            "name": "Dove rivolgersi",
+            "serviceUrl": "<canale digitale>",
             "availableLanguage": {
               "@type": "Language",
               "name": "Italian",
@@ -274,14 +278,16 @@ Si riporta il template del codice, con gli attributi in formato `<nomeattributo>
               "name": "<unità organizzativa>",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "luogo:indirizzo",
-                "postalCode": "luogo:cap"
+                "streetAddress": "<luogo:indirizzo>",
+                "postalCode": "<luogo:cap>"
                 "addressLocality": "<nomecomune>",
               }
             }
           }
         }
 	</script>
+
+L'attributo `availableChannel>serviceUrl` **deve** essere presente in quei servizi erogati anche in modalità digitale e deve indicare l'url di accesso al servizio digitale.
 
 
 
