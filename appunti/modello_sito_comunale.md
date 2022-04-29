@@ -197,6 +197,66 @@ Nell'intestazione di pagina delle pagine step sono previste le briciole di pane,
 
 {todo: rimando ai CMS}
 
+
+
+## Il motore di ricerca
+
+Fra i vantaggi della definizione dei concetti|ontologie|content type vi è anche il fatto che la loro esplicitazione esprime dei vincoli sulla modalità di rappresentazione dei dati (la base di dati) e permette di definire la modalità di ricerca degli elementi appartenenti a quel content type, e dunque aiutare la trovabilità.
+
+In base alla tipologia degli attributi pertinenti possiamo immaginare strategie diverse. Gli attributi categoriali che appartengono ad un vocabolario controllato possono essere usati sia per la navigazione principale che per la navigazione a faccette (filtri). Gli attributi booleani costituiscono un caso particolare, e possono essere usati per la navigazone a faccette.
+Gli attributi i cui valori sono su scala ordinale possono essere utilizzati per ordinare i risultati o per filtrare per range, utilizzando dei cut-off.
+Gli attributi su scala temporale (data, ora, millisecondi) possono essere utilizzati sia per ordinare che per filtrare per data o per range temporale.
+Gli attributi di tipo geografico possono essere utilizzati sia come faccetta di navigazione (utilizzando la loro natura gerarchica, es stato -> regione -> provincia -> comune) sia come filtro, ad esempio per area racchiusa in coordinate spaziali.
+Gli attributi testuali possono essere utilizzati per la ricerca testuale e per l'ordinamento per ordine alfabetico. Il limite dell'ordine alfabetico è che non è semanticamente significativo ma, in mancanza di criteri migliori, è il più noto e il più *neutrale*.
+
+Nella progettazione del motore di ricerca si consiglia dunque di:
+
+* permettere la ricerca libera degli attributi testuali
+* implementare un sistema di filtri (navigazione a faccette) sugli attributi categoriali o ordinali pertinenti;
+	* si suggerisce di usare radio button (un elemento alla volta) all'interno della stessa, con la possibilità di rimuovere il filtro
+	* si suggerisce di usare un'interfaccia (ad esempio, ma non necessariamente, degli slider) per filtrare gli attributi rappresentati su scala ordinale o a intervalli;
+	* si suggerisce di usare un range di date per gli attributi di tipo data
+
+Nel modello comuni si consiglia di adottare le seguenti strategie:
+
+Nel motore di ricerca globale si consiglia di offrire **di default** la ricerca libera senza filtri (i filtri costituiscono un'interazione avanzata non sempre compresa) ma di presentare la possibilità di filtrare in base alle faccette.
+
+### Motore di ricerca globale
+ 
+Nel motore di ricerca globale si consiglia di usare due tipologie di filtri:
+
+* i content type principali, raggruppati per le voci principali della navigazione:
+
+	Amministrazione
+		* Unità organizzativa
+		* Persona pubblica
+		* Documenti
+	Servizi
+	Notizie
+	Vivere il comune
+		* Luogo
+		* Evento
+
+* argomenti (in quanto tag trasversale a tutti i content type)
+
+Dunque il risultato della ricerca a testo liberò potrà essere filtrato per tipologia di contenuto (es solo le persone, oppure solo gli eventi) e per argomenti (es solo i risultati con il tag "Sicurezza pubblica")
+
+### Ricerca contestuale
+
+In alcune delle pagine indice di primo e secondo livello si suggerisce di presentare una navigazione a faccette ed un motore di ricerca contestuale, che presenti solo i risultati legati a quella sezione (e dunque alle relative tipologie di contenuti).
+
+Più in particolare nella pagine indice "Servizi" si suggerisce di permettere un filtro a faccette in base a
+
+* argomenti
+* eventi della vita delle persone e delle aziende
+* output del servizio (tassonomia in via di definizione
+
+La logica andrà replicata anche nelle pagine indice delle categorie dei servizi, definiti dall'attributo `Temi dei servizi`, es "Anagrafe e stato civile", "Appalti pubblici". Dunque i servizi saranno implicitamente e necessariamente filtrati per la tipologia di contenuti `servizio` e, negli indici di secondo livello, per il tema selezionato, con la possibilità di filtrare per argomenti, eventi della vita, output. Nei filtri andranno visualizzate solo le opzioni (le voci del relativo vocabolario controllato) non vuote.
+
+
+
+
+
 ## Scheda informativa di servizio al cittadino
 
 {nota: è meglio tenerla qui o spostarla in flusso di servizi?}
