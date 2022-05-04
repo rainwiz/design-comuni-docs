@@ -398,13 +398,15 @@ Nel terzo passaggio, all'utente viene data la possibilità di inserire un breve 
 
 ## Segnalazione disservizio
 
-Il comune offre ai cittadini la possibilità di segnalare un disservizio.
+Il servizio è finalizzato a permettere da una parte al comune di segnalare problemi, interruzioni di servizio, incidenti sul territorio comunale (ad esempio modifiche della viabilità, interruzioni programmate di servizi, chiusure temporanee di uffici e così via); allo stesso tempo, offre ai cittadini la possibilità di segnalare un problema riscontrato sul territorio.
 
-La funzione prevede di:
+Il servizio permette dunque sia di aggiungere una segnalazione che di visualizzare le segnalazioni del comune e degli altri cittadini.
+
+La funzione di aggiunta di una segnalazione prevede di:
 
 * assegnare una categoria alla segnalazione
 * indicare il luogo a cui la segnalazione si riferisce, attraverso l'immissione di un indirizzo o con la funzione di geotag su una mappa
-* indicare l'oggetto della segnalazione
+* indicare l'oggetto (il titolo) della segnalazione
 * aggiungere una breve descrizione
 * aggiungere delle immagini
 * allegare uno o più documenti
@@ -412,19 +414,26 @@ La funzione prevede di:
 Per quanto riguarda la categoria della segnalazione, si suggerisce di prevedere un elenco di tipologie di segnalazione. A titolo di esempio, si suggeriscono le seguenti categorie:
 
 
+* Acqua, allagamenti, problemi fognari
+* Ambiente, inquinamento, protezione ambientale
 * Arredo urbano
+* Disinfestazione, derattizazione, animali randagi
+* Igiene urbana, rifiuti, pulizia e decoro
 * Illuminazione pubblica
-* Manutezione parchi giochi
-* Ordine pubblico e disturbo quiete pubblica 
+* Manutenzione immobili, edifici pubblici, scuole, barriere architettoniche, cimiteri
+* Ordine pubblico, disturbo della quiete
 * Parchi e verde pubblico
-* Rifiuti e deiezioni
-* Servizi diretti dell’Amministrazione
-* Strade e marciapiedi
-* Tematiche ambientali
-* Trasporto pubblico
-* Viabilità
-* Altro
+* Servizi del comune
+* Sicurezza, degrado urbano e sociale
+* Strade, marciapiedi, segnaletica e viabilità
 
+Il comune ha comunque facoltà di aggiungere un numero limitato di voci.
+
+Il servizio "segnalazione disservizio" va incluso fra i servizi del comune.
+
+La visualizzazione delle segnalazioni è una delle sezioni di secondo livello della sezione "Vivere il comune".
+La pagina lista della sezione "segnalazioni" contiene la lista delle segnalazioni e una mappa del territorio comunale, con i geotag della lista.  
+La lista può essere filtrata per tipo di segnalazione (dal comune o dai cittadini), per categoria e per stato della segnalazione.
 
 
 
