@@ -198,6 +198,77 @@ Nell'intestazione di pagina delle pagine step sono previste le briciole di pane,
 {todo: rimando ai CMS}
 
 
+## Le pagine miste
+
+La home page e le pagine di primo livello sono definite "pagine miste", in quanto possono contenere tipologie di dati diverse.
+
+### Home page
+
+La home page è composta da:
+
+* una notizia o evento in evidenza, in formato card grande, preferibilmente con immagine
+* una sezione di 3 notizie in evidenza, con il link "vedi tutte" che porta al ramo "Novità"
+* può avere una sezione amministrazione, con un massimo di 3 card (ad esempio il sindaco, la giunta comunale, il consiglio comunale)
+* un calendario con un massimo di 4 eventi in evidenza, con il link "vedi tutti" che porta al ramo "Vivere il comune" -> "Eventi"
+* una sezione con 3 argomenti in evidenza (tratti dalla tassonomia argomenti) con il link "Vedi tutti" che porta al ramo "Argomenti"
+* può avere una sezione "Gallerie", con un massimo di 3 eventi passati che abbiano una galleria di immagini o video
+* può avere una sezione "Luoghi", con un massimo di 3 luoghi, con il link "vedi tutti" che porta al ramo "Vivere il comune" -> "Luoghi"
+* può avere una sezione con dei link a siti tematici esterni al sito del comune
+
+
+### Liste di primo livello
+
+Le pagine relative ai rami di primo livello (Amministrazione, Novità, Servizi, Vivere il comune).
+
+### Servizi
+
+La pagina lista "Servizi" è composta da:
+
+* motore di ricerca contestuale
+* elenco servizi in evidenza (link)
+* elenco dei primi 5 servizi, in ordine alfabetico
+* l'elenco delle categorie di servizi
+
+In caso di uso del motore di ricerca, i primi 5 servizi verranno sostituiti con i primi risultati del motore di ricerca, filtrati con un meccanismo di live sarch
+
+### Amministrazione
+
+Amministrazione è un ramo che contiene elementi di 3 tipologie di contenuto:
+
+* persone
+* unità organizzative
+* documenti e dati
+
+Ogni tipologia deve avere una propria sezione nella pagina. Ogni sezione potrà avere dei contenuti in evidenza (persone in evidenza, unità organizzative in evidenza, documenti e dati in evidenza), e l'elenco delle categorie non vuote della specifica tassonomia:
+
+* per persone la tassonomia "Tipi di incarico": politici, amministrativi, altri incarichi
+* per le unità organizzative la tassonomia "Tipi di unità organizzativa": organi di governo, aree amministrative, uffici, enti e fondazioni
+* per documenti e dati: Documenti albo pretorio, Modulistica, Documenti funzionamento interno, Normative, Accordi tra enti, Documenti attività politica, Rapporti tecnici, Istanze, Documenti di programmazione e rendicontazione, Dataset
+
+### Vivere il comune
+
+"Vivere il comune" è un ramo che contiene 2 tipologie di contenuto:
+
+* eventi
+* luoghi
+
+Ogni tipologia deve avere una propria sezione nella pagina. Poiché questa pagina ha, principalmente, una funzione "vetrina", ogni sezione (Eventi, Luoghi) **deve** avere 6 elementi in evidenza e un link che porta alle corrispondenti pagine di secondo livello (lista Eventi e lista Luoghi)
+
+### Novità
+
+"Novità" è un ramo che contiene la tipologia di contenuto "Notizia"
+
+La pagina deve contenere una sezione "Notizie in evidenza" e una sezione con l'elenco delle notizie ordinate per data, con paginazione.
+
+## Pagine lista di secondo livello
+
+Coerentemente con la raccomandazione nella sezione "Classificare le risorse", i rami dell'alberatura dovrebbero contenere o solo categorie di livello inferiore (rami inferiori) o solo (foglie
+
+
+
+
+
+
 
 ## Il motore di ricerca
 
@@ -225,18 +296,16 @@ Nel motore di ricerca globale si consiglia di offrire **di default** la ricerca 
  
 Nel motore di ricerca globale si consiglia di usare due tipologie di filtri:
 
-* i content type principali, raggruppati per le voci principali della navigazione:
-
-	Amministrazione
+* i content type principali, facoltativamente raggruppati per le voci principali della navigazione:
+	* Amministrazione
 		* Unità organizzativa
 		* Persona pubblica
 		* Documenti
-	Servizi
-	Notizie
-	Vivere il comune
+	* Servizi
+	* Notizie
+	* Vivere il comune
 		* Luogo
 		* Evento
-
 * argomenti (in quanto tag trasversale a tutti i content type)
 
 Dunque il risultato della ricerca a testo liberò potrà essere filtrato per tipologia di contenuto (es solo le persone, oppure solo gli eventi) e per argomenti (es solo i risultati con il tag "Sicurezza pubblica")
