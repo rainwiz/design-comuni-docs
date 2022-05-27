@@ -229,7 +229,7 @@ La pagina lista "Servizi" è composta da:
 * elenco dei primi 5 servizi, in ordine alfabetico
 * l'elenco delle categorie di servizi
 
-In caso di uso del motore di ricerca, i primi 5 servizi verranno sostituiti con i primi risultati del motore di ricerca, filtrati con un meccanismo di live sarch
+In caso di uso del motore di ricerca, i primi 5 servizi verranno sostituiti con i primi risultati del motore di ricerca, filtrati con un meccanismo di live search.
 
 ### Amministrazione
 
@@ -262,8 +262,15 @@ La pagina deve contenere una sezione "Notizie in evidenza" e una sezione con l'e
 
 ## Pagine lista di secondo livello
 
-Coerentemente con la raccomandazione nella sezione "Classificare le risorse", i rami dell'alberatura dovrebbero contenere o solo categorie di livello inferiore (rami inferiori) o solo (foglie
+Le pagine lista di secondo livello possono contenere o solo categorie (ovvero link a pagine lista di livello successivo), o solo risorse (pagine foglia di una specifica tipologia di contenuto) o entrambe.
 
+Coerentemente con la raccomandazione nella sezione "Classificare le risorse", i rami dell'alberatura dovrebbero preferibilmente contenere o solo categorie di livello inferiore (rami inferiori) o solo contenuti (foglie)
+
+Le pagine lista che contengono solo categorie sono strutturate con una sezione "{tipologia di contenuto} in evidenza" (ad esempio "Luoghi in evidenza") con fino ad un massimo di 6 elementi in evidenza e una sezione "Tutte le categorie" con l'elenco delle categorie, di norma in ordine alfabetico.
+
+Le pagine lista che contengono solo risorse (foglie) sono strutturate con una sezione "{tipologia di contenuto} in evidenza" (ad esempio "Luoghi in evidenza") con fino ad un massimo di 6 elementi in evidenza e una sezione "Tutte i {tipologia di contenuto}" (ad esempio "Tutti i luoghi") con l'elenco paginato delle risorse, di norma in ordine alfabetico.
+
+Le pagine lista che contengono sia categorie (rami inferiori) che risorse (foglie) possono avere una sezione "{tipologia di contenuto} in evidenza" (ad esempio "Luoghi in evidenza") con fino ad un massimo di 6 elementi in evidenza, una sezione "Tutte i {tipologia di contenuto}" (ad esempio "Tutti i luoghi") con l'elenco paginato delle risorse, di norma in ordine alfabetico, e una sezione "Tutte le categorie" con l'elenco delle categorie, di norma in ordine alfabetico.
 
 
 
