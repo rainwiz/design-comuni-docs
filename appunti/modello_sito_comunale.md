@@ -207,7 +207,7 @@ La home page e le pagine di primo livello sono definite "pagine miste", in quant
 La home page è composta da:
 
 * una notizia o evento in evidenza, in formato card grande, preferibilmente con immagine
-* una sezione di 3 notizie in evidenza, con il link "vedi tutte" che porta al ramo "Novità"
+* può avere una sezione di 3 notizie in evidenza, con il link "vedi tutte" che porta al ramo "Novità"
 * può avere una sezione amministrazione, con un massimo di 3 card (ad esempio il sindaco, la giunta comunale, il consiglio comunale)
 * un calendario con un massimo di 4 eventi in evidenza, con il link "vedi tutti" che porta al ramo "Vivere il comune" -> "Eventi"
 * una sezione con 3 argomenti in evidenza (tratti dalla tassonomia argomenti) con il link "Vedi tutti" che porta al ramo "Argomenti"
