@@ -239,7 +239,7 @@ Amministrazione è un ramo che contiene elementi di 3 tipologie di contenuto:
 * unità organizzative
 * documenti e dati
 
-Ogni tipologia deve avere una propria sezione nella pagina. Ogni sezione potrà avere dei contenuti in evidenza (persone in evidenza, unità organizzative in evidenza, documenti e dati in evidenza), e l'elenco delle categorie non vuote della specifica tassonomia:
+Ogni tipologia deve avere una propria sezione nella pagina. Ogni sezione potrà avere fino a 3 contenuti in evidenza (persone in evidenza, unità organizzative in evidenza, documenti e dati in evidenza), e l'elenco delle categorie non vuote della specifica tassonomia:
 
 * per persone la tassonomia "Tipi di incarico": politici, amministrativi, altri incarichi
 * per le unità organizzative la tassonomia "Tipi di unità organizzativa": organi di governo, aree amministrative, uffici, enti e fondazioni
@@ -266,11 +266,11 @@ Le pagine lista di secondo livello possono contenere o solo categorie (ovvero li
 
 Coerentemente con la raccomandazione nella sezione "Classificare le risorse", i rami dell'alberatura dovrebbero preferibilmente contenere o solo categorie di livello inferiore (rami inferiori) o solo contenuti (foglie)
 
-Le pagine lista che contengono solo categorie sono strutturate con una sezione "{tipologia di contenuto} in evidenza" (ad esempio "Luoghi in evidenza") con fino ad un massimo di 6 elementi in evidenza e una sezione "Tutte le categorie" con l'elenco delle categorie, di norma in ordine alfabetico.
+Le pagine lista che contengono solo categorie sono strutturate con una sezione "{tipologia di contenuto} in evidenza" (ad esempio "Luoghi in evidenza") con fino ad un massimo di 3 elementi in evidenza e una sezione "Tutte le categorie" con l'elenco delle categorie, di norma in ordine alfabetico.
 
-Le pagine lista che contengono solo risorse (foglie) sono strutturate con una sezione "{tipologia di contenuto} in evidenza" (ad esempio "Luoghi in evidenza") con fino ad un massimo di 6 elementi in evidenza e una sezione "Tutte i {tipologia di contenuto}" (ad esempio "Tutti i luoghi") con l'elenco paginato delle risorse, di norma in ordine alfabetico.
+Le pagine lista che contengono solo risorse (foglie) sono strutturate con una sezione "{tipologia di contenuto} in evidenza" (ad esempio "Luoghi in evidenza") con fino ad un massimo di 3 elementi in evidenza e una sezione "Tutte i {tipologia di contenuto}" (ad esempio "Tutti i luoghi") con l'elenco paginato delle risorse, di norma in ordine alfabetico.
 
-Le pagine lista che contengono sia categorie (rami inferiori) che risorse (foglie) possono avere una sezione "{tipologia di contenuto} in evidenza" (ad esempio "Luoghi in evidenza") con fino ad un massimo di 6 elementi in evidenza, una sezione "Tutte i {tipologia di contenuto}" (ad esempio "Tutti i luoghi") con l'elenco paginato delle risorse, di norma in ordine alfabetico, e una sezione "Tutte le categorie" con l'elenco delle categorie, di norma in ordine alfabetico.
+Le pagine lista che contengono sia categorie (rami inferiori) che risorse (foglie) possono avere una sezione "{tipologia di contenuto} in evidenza" (ad esempio "Luoghi in evidenza") con fino ad un massimo di 3 elementi in evidenza, una sezione "Tutti i {tipologia di contenuto}" (ad esempio "Tutti i luoghi") con l'elenco paginato delle risorse, di norma in ordine alfabetico, e una sezione "Tutte le categorie" con l'elenco delle categorie, di norma in ordine alfabetico.
 
 
 
